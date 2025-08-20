@@ -38,12 +38,12 @@ public class ConversorApp {
             int opcion;
             do {
                 System.out.println("**********************************");
-                System.out.println("1) Dólar ==> Peso argentino");
-                System.out.println("2) Peso argentino ==> Dólar");
-                System.out.println("3) Dólar ==> Real brasileño");
-                System.out.println("4) Real brasileño ==> Dólar");
-                System.out.println("5) Dólar ==> Peso colombiano");
-                System.out.println("6) Peso colombiano ==> Dólar");
+                System.out.println("1) Dólar americano ==> Peso argentino");
+                System.out.println("2) Peso argentino ==> Dólar americano");
+                System.out.println("3) Dólar americano ==> Real brasileño");
+                System.out.println("4) Real brasileño ==> Dólar americano");
+                System.out.println("5) Dólar americano ==> Peso colombiano");
+                System.out.println("6) Peso colombiano ==> Dólar americano");
                 System.out.println("7) Salir");
                 System.out.print("Elija una opción válida: ");
                 opcion = scanner.nextInt();
