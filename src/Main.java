@@ -5,14 +5,14 @@ import java.net.URL;
 import java.util.Scanner;
 import org.json.JSONObject;
 
-public class ConversorApp {
-    private static final String API_KEY = "e5c2fc7c34d81e6e725f8b4f"; // tu API key
+public class Main {
+    private static final String API_KEY = "e5c2fc7c34d81e6e725f8b4f";
     private static final String API_URL = "https://v6.exchangerate-api.com/v6/" + "e5c2fc7c34d81e6e725f8b4f" + "/latest/USD";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
-            // 1) Conexión a la API
+
             URL url = new URL(API_URL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -25,16 +25,16 @@ public class ConversorApp {
             }
             reader.close();
 
-            // 2) Parsear JSON
+
             JSONObject json = new JSONObject(response.toString());
             JSONObject rates = json.getJSONObject("conversion_rates");
 
-            // Extraer tasas necesarias
-            double ars = rates.getDouble("ARS"); // Peso argentino
-            double brl = rates.getDouble("BRL"); // Real brasileño
-            double cop = rates.getDouble("COP"); // Peso colombiano
 
-            // 3) Menú
+            double ars = rates.getDouble("ARS");
+            double brl = rates.getDouble("BRL");
+            double cop = rates.getDouble("COP");
+
+
             int opcion;
             do {
                 System.out.println("**********************************");
